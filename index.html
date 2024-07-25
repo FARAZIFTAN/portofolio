@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Modern Portfolio</title>
+        <link href="https://cdn.jsdelivr.net/npm/tailwindcss@latest/dist/tailwind.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="css/styles.css">
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    </head>
+    
+    
+<body class="bg-gray-100 text-gray-800">
+
+<!-- Navbar -->
+<nav class="navbar fixed w-full flex items-center justify-between px-6 py-4 backdrop-blur-md bg-white/30 shadow-md z-50">
+    <div class="flex items-center space-x-4">
+        <!-- Logo and Title -->
+        <a href="#" class="flex items-center text-2xl font-bold text-white space-x-2">
+            <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 12H2m6-7a7 7 0 017 7h0a7 7 0 01-7 7h0a7 7 0 010-14zm13 0a7 7 0 11-14 0h14z"></path>
+            </svg>
+            <span>My Portfolio</span>
+        </a>
+    </div>
+    <!-- Menu Items -->
+    <ul class="hidden md:flex items-center space-x-6 text-lg font-medium">
+        <li><a href="#home" class="menu-link">Home</a></li>
+        <li><a href="#about" class="menu-link">About</a></li>
+        <li class="relative group">
+            <a href="#projects" class="menu-link">Projects</a>
+            <ul class="dropdown-menu absolute left-0 top-10 hidden bg-white text-gray-900 shadow-lg rounded-md group-hover:flex flex-col">
+                <li><a href="#web-dev" class="dropdown-item">Web Development</a></li>
+                <li><a href="#design" class="dropdown-item">Design</a></li>
+                <li><a href="#others" class="dropdown-item">Others</a></li>
+            </ul>
+        </li>
+        <li><a href="#contact" class="menu-link">Contact</a></li>
+        <li>
+        </li>
+    </ul>
+    <!-- Hamburger Menu -->
+    <button id="menu-toggle" class="md:hidden text-white focus:outline-none">
+        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+        </svg>
+    </button>
+</nav>
+
+<!-- Hero Section -->
+<section id="hero" class="relative bg-cover bg-center bg-no-repeat h-screen overflow-hidden" style="background-image: url('https://cdn.pixabay.com/photo/2015/05/26/23/52/technology-785742_1280.jpg');">
+    <!-- Background Video -->
+    <video autoplay loop muted playsinline class="absolute w-full h-full object-cover">
+        <source src="videos/hero-background.mp4" type="video/mp4">
+        <!-- Fallback Image -->
+        Your browser does not support the video tag.
+    </video>
+    <!-- Overlay for better readability -->
+    <div class="absolute inset-0 bg-black bg-opacity-60"></div>
+    
+    <!-- Main Content -->
+    <div class="container mx-auto flex flex-col items-center justify-center h-full text-center relative z-10 px-6">
+        <!-- Animated Headline -->
+        <h1 class="text-6xl md:text-8xl font-extrabold text-white leading-tight tracking-wide mb-4 animate__animated animate__fadeInDown">
+            Welcome to <span class="text-indigo-500">My Portfolio</span>
+        </h1>
+        <!-- Typewriter Effect for Subtitle -->
+        <p id="typewriter" class="text-lg md:text-2xl text-gray-300 mt-4 mb-8"></p>
+        
+        <!-- Call to Action Button -->
+        <a href="#projects" class="bg-indigo-600 text-white px-10 py-4 rounded-full text-lg font-semibold shadow-lg hover:bg-indigo-700 transition duration-300 transform hover:scale-105 animate__animated animate__fadeInUp">
+            View My Projects
+        </a>
+    </div>
+    
+    <!-- Animated Scroll Down Indicator -->
+    <div class="absolute bottom-10 left-0 right-0 flex justify-center">
+        <a href="#about" class="text-white text-3xl animate-bounce">
+            <i class="fas fa-chevron-down"></i>
+        </a>
+    </div>
+</section>
+
+
+  <!-- About Me Section -->
+<section id="about" class="py-20 bg-white">
+    <div class="container mx-auto flex flex-col md:flex-row items-center px-6">
+        <!-- Profile Image -->
+        <div class="w-full md:w-1/3 mb-8 md:mb-0 flex justify-center">
+            <img src="img/jiftan copy.jpg" alt="Profile Picture" class="w-64 h-64 object-cover rounded-full shadow-lg transform hover:scale-105 transition duration-300">
+        </div>
+        <!-- About Me Text -->
+        <div class="w-full md:w-2/3 text-center md:text-left">
+            <h2 class="text-4xl font-bold mb-4 text-gray-900">About Me</h2>
+            <p class="text-gray-700 text-lg mb-4">
+                Hi, I'm <span class="font-semibold text-indigo-600">A.M Faraziftan</span>, a passionate web developer with a love for creating beautiful and functional web experiences. I specialize in front-end development and have a keen eye for design.
+            </p>
+            <p class="text-gray-700 text-lg mb-4">
+                With a background in computer science and extensive experience in HTML, CSS, JavaScript, and various frameworks, I enjoy bringing ideas to life in the browser. My goal is to create user-friendly and responsive web applications.
+            </p>
+            <p class="text-gray-700 text-lg">
+                In my free time, I love exploring new technologies, contributing to open-source projects, and sharing my knowledge with the developer community.
+            </p>
+            <div class="mt-6">
+                <a href="#projects" class="bg-indigo-600 text-white px-6 py-3 rounded-full hover:bg-indigo-700 transition">View My Projects</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+ <!-- My Projects Section -->
+<section id="projects" class="py-16 bg-gray-100">
+    <div class="container mx-auto px-6">
+      <h2 class="text-4xl font-extrabold text-center mb-12">My Projects</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        
+        <!-- Project Card -->
+        <div class="project-card bg-white rounded-lg shadow-lg transform transition duration-500 hover:scale-105 hover:shadow-xl">
+          <div class="relative overflow-hidden">
+            <img src="img/image copy 2.png" alt="Project 1" class="w-full h-48 object-cover rounded-t-lg">
+            <div class="absolute inset-0 bg-black bg-opacity-50 opacity-0 transition-opacity duration-300 hover:opacity-100 flex items-center justify-center">
+              <a href="#project1-details" class="text-white text-lg font-bold hover:text-indigo-300">View Details</a>
+            </div>
+          </div>
+          <div class="p-6">
+            <h3 class="text-2xl font-semibold mb-2">Project 1: Innovative Design</h3>
+            <p class="text-gray-700">Explore the innovative solutions implemented in this project. Featuring cutting-edge design and technologies.</p>
+            <div class="mt-4 flex justify-between items-center">
+              <span class="text-sm text-gray-500">July 2024</span>
+              <a href="#" class="text-indigo-600 hover:underline">Read More &rarr;</a>
+            </div>
+          </div>
+        </div>
+  
+        <!-- Project Card -->
+        <div class="project-card bg-white rounded-lg shadow-lg transform transition duration-500 hover:scale-105 hover:shadow-xl">
+          <div class="relative overflow-hidden">
+            <img src="img/image.png" alt="Project 2" class="w-full h-48 object-cover rounded-t-lg">
+            <div class="absolute inset-0 bg-black bg-opacity-50 opacity-0 transition-opacity duration-300 hover:opacity-100 flex items-center justify-center">
+              <a href="#project2-details" class="text-white text-lg font-bold hover:text-indigo-300">View Details</a>
+            </div>
+          </div>
+          <div class="p-6">
+            <h3 class="text-2xl font-semibold mb-2">Project 2: Responsive Web App</h3>
+            <p class="text-gray-700">A responsive web application that adapts to different devices, providing a seamless user experience.</p>
+            <div class="mt-4 flex justify-between items-center">
+              <span class="text-sm text-gray-500">June 2024</span>
+              <a href="#" class="text-indigo-600 hover:underline">Read More &rarr;</a>
+            </div>
+          </div>
+        </div>
+  
+        <!-- Project Card -->
+        <div class="project-card bg-white rounded-lg shadow-lg transform transition duration-500 hover:scale-105 hover:shadow-xl">
+          <div class="relative overflow-hidden">
+            <img src="img/image copy.png" alt="Project 3" class="w-full h-48 object-cover rounded-t-lg">
+            <div class="absolute inset-0 bg-black bg-opacity-50 opacity-0 transition-opacity duration-300 hover:opacity-100 flex items-center justify-center">
+              <a href="#project3-details" class="text-white text-lg font-bold hover:text-indigo-300">View Details</a>
+            </div>
+          </div>
+          <div class="p-6">
+            <h3 class="text-2xl font-semibold mb-2">Project 3: E-commerce Solution</h3>
+            <p class="text-gray-700">An advanced e-commerce platform designed to enhance shopping experiences and streamline operations.</p>
+            <div class="mt-4 flex justify-between items-center">
+              <span class="text-sm text-gray-500">May 2024</span>
+              <a href="#" class="text-indigo-600 hover:underline">Read More &rarr;</a>
+            </div>
+          </div>
+        </div>
+  
+        <!-- Add more project cards as needed -->
+  
+      </div>
+    </div>
+  </section>
+  
+
+
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-6">
+        <div class="container mx-auto text-center">
+            <p>&copy; 2024 Modern Portfolio. All rights reserved.</p>
+        </div>
+    </footer>
+    <script>
+        // Navbar scroll effect
+        window.addEventListener('scroll', () => {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // Mobile menu toggle
+        const menuToggle = document.getElementById('menu-toggle');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuToggle.addEventListener('click', () => {
+            menuToggle.classList.toggle('open');
+            mobileMenu.classList.toggle('open');
+        });
+    </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"></script>
+    <script src="js/scripts.js"></script>
+</body>
+</html>
